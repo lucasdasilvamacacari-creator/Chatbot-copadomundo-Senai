@@ -3,7 +3,7 @@ const mensagem = document.getElementById("mensagem");
 const btnEnviar = document.getElementById("btnEnviar");
 const btnLimpar = document.getElementById("btnLimpar");
 
-const API_URL = "http://127.0.0.1:5000/chat";
+const API_URL = "https://chatbot-copadomundo-senai.onrender.com/chat";
 
 const mensagemInicial =
   "Olá! Sou um assistente especializado em Copas do Mundo de futebol. Posso ajudar com dúvidas sobre história, seleções, regras, sedes, recordes e curiosidades de todas as edições do torneio.";
