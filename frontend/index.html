@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatbot Copa do Mundo</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='4' fill='%23123a63'/%3E%3Ccircle cx='12' cy='12' r='7' fill='none' stroke='%2323b26a' stroke-width='1.6'/%3E%3Cpath d='M12 7l2.5 1.8-1 2.9h-3l-1-2.9z' fill='%2323b26a'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="pitch-strip" aria-hidden="true"></div>
+
+  <main class="container">
+    <section class="chat-card">
+
+      <header class="chat-header">
+        <div class="header-top">
+          <div class="brand">
+            <span class="brand-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="8.5" stroke="#23b26a" stroke-width="1.4"/>
+                <path d="M12 6.6l2.9 2.1-1.1 3.4h-3.6l-1.1-3.4z" fill="#23b26a"/>
+                <path d="M9.2 11.7l-3 2.2M14.8 11.7l3 2.2M10.2 15.1l1.8 3.9M13.8 15.1l-1.8 3.9" stroke="#23b26a" stroke-width="1.1" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <div>
+              <p class="eyebrow">Assistente temático &middot; futebol</p>
+              <h1>Chatbot Copa do Mundo</h1>
+            </div>
+          </div>
+          <div class="status" role="status">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span class="status-label">Assistente em campo</span>
+          </div>
+        </div>
+
+        <p class="header-desc">Tire dúvidas sobre história das Copas, seleções, regras do futebol, sedes e recordes de todas as edições do torneio.</p>
+
+        <ul class="class-badges" aria-label="Temas cobertos">
+          <li class="badge" title="História e edições anteriores das Copas do Mundo">HIST</li>
+          <li class="badge" title="Regras e formato das competições">REGRAS</li>
+          <li class="badge" title="Seleções, grupos e classificações">SELEÇÕES</li>
+          <li class="badge" title="Recordes, artilheiros e curiosidades">RECORDES</li>
+          <li class="badge" title="Sedes, estádios e organização dos torneios">SEDES</li>
+        </ul>
+      </header>
+
+      <section id="chat" class="chat-box" aria-live="polite" aria-label="Conversa">
+        <div class="message bot">
+          <span class="msg-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.3"/>
+              <path d="M12 7l2.3 1.6-.9 2.7h-2.8l-.9-2.7z" fill="currentColor"/>
+            </svg>
+          </span>
+          <div class="msg-content">Olá! Sou um assistente especializado em Copas do Mundo de futebol. Posso ajudar com dúvidas sobre história, seleções, regras, sedes, recordes e curiosidades de todas as edições do torneio.</div>
+        </div>
+      </section>
+
+      <section class="input-area">
+        <div class="input-row">
+          <textarea
+            id="mensagem"
+            placeholder="Digite sua pergunta sobre a Copa do Mundo..."
+            rows="1"
+          ></textarea>
+          <button id="btnEnviar" class="btn-send" aria-label="Enviar mensagem">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 12l16-8-6 8 6 8-16-8z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+        <div class="actions-row">
+          <button id="btnLimpar" class="btn-clear" type="button">Limpar conversa</button>
+          <p class="disclaimer">Conteúdo informativo &middot; confira sempre fontes oficiais do futebol para dados atualizados</p>
+        </div>
+      </section>
+
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
